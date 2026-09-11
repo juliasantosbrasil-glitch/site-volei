@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudo Sobre Vôlei | Saques e Lendas do Esporte</title>
+    <style>
+        /* RESET E ESTILOS GERAIS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CABEÇALHO */
+        header {
+            background: linear-gradient(135deg, #004488, #0066cc);
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        /* NAVEGAÇÃO */
+        nav {
+            background-color: #002b55;
+            display: flex;
+            justify-content: center;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* CONTAINER PRINCIPAL */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: #fff;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #004488;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #ffcc00;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* SEÇÃO DE SAQUES (GRID) */
+        .saques-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .saque-card {
+            background-color: #f8f9fa;
+            border-left: 5px solid #0066cc;
+            padding: 1.2rem;
+            border-radius: 5px;
+        }
+
+        .saque-card h3 {
+            color: #004488;
+            margin-bottom: 0.5rem;
+        }
+
+        /* SEÇÃO DE JOGADORAS (CARDS) */
+        .jogadoras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .jogadora-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .jogadora-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .jogadora-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background-color: #ccc;
+        }
+
+        .jogadora-info {
+            padding: 1.5rem;
+        }
+
+        .jogadora-info h3 {
+            color: #004488;
+            margin-bottom: 0.3rem;
+        }
+
+        .jogadora-info .pais {
+            color: #777;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* RODAPÉ */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #002b55;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            nav { flex-direction: column; text-align: center; }
+            nav a { margin: 5px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>Mundo do Vôlei</h1>
+        <p>Aprenda os fundamentos e conheça os grandes nomes do esporte</p>
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+        <a href="#saques">Tipos de Saque</a>
+        <a href="#jogadoras">Melhores Jogadoras</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- SEÇÃO: TIPOS DE SAQUE -->
+        <section id="saques">
+            <h2>Quais Saques Existem no Vôlei?</h2>
+            <p style="margin-bottom: 1.5rem;">O saque é o fundamento que coloca a bola em jogo. Existem diferentes técnicas utilizadas de acordo com a estratégia e o nível dos jogadores:</p>
+
+            <div class="saques-grid">
+                <div class="saque-card">
+                    <h3>1. Saque por Baixo</h3>
+                    <p>O mais básico e fácil de executar. O jogador segura a bola com uma mão e bate por baixo com o outro púnico espalmado ou fechado. Muito comum para iniciantes e nas escolas.</p>
+                </div>
+
+                <div class="saque-card">
+                    <h3>2. Saque por Cima (Por Cima Tradicional)</h3>
+                    <p>O jogador lança a bola acima da cabeça e acerta com a palma da mão aberta. Oferece mais controle e velocidade que o saque por baixo.</p>
+                </div>
+
+                <div class="saque-card">
+                    <h3>3. Saque Flutuante</h3>
+                    <p>Feito por cima, o jogador bate no centro da bola rapidamente sem dar rotação a ela. Isso faz com que a bola oscile no ar devido ao vento, dificultando muito a recepção.</p>
+                </div>
+
+                <div class="saque-card">
+                    <h3>4. Saque Viagem (Jornada nas Estrelas / Salto)</h3>
+                    <p>É um saque potente executado com salto. O jogador lança a bola alta para frente, corre e salta atacando-a no ar, similar a uma cortada. Alcança altíssimas velocidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: 3 MELHORES JOGADORAS -->
+        <section id="jogadoras">
+            <h2>3 das Melhores Jogadoras do Vôlei</h2>
+            <p style="margin-bottom: 1.5rem;">Conheça três das atletas mais dominantes e vitoriosas da história do voleibol mundial:</p>
+
+            <div class="jogadoras-grid">
+                
+                <!-- JOGADORA 1 -->
+                <div class="jogadora-card">
+                    <img src="https://images.unsplash.com/photo-1592656670497-428616149449?auto=format&fit=crop&w=600&q=80" alt="Gabi Guimarães" class="jogadora-img">
+                    <div class="jogadora-info">
+                        <h3>Gabi Guimarães</h3>
+                        <p class="pais">🇧🇷 Brasil | Ponteira</p>
+                        <p>Considerada uma das melhores ponteiras do mundo na atualidade. Destaca-se pelo equilíbrio perfeito entre um passe impecável, defesa espetacular e grande inteligência de ataque.</p>
+                    </div>
+                </div>
+
+                <!-- JOGADORA 2 -->
+                <div class="jogadora-card">
+                    <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=600&q=80" alt="Tijana Bošković" class="jogadora-img">
+                    <div class="jogadora-info">
+                        <h3>Tijana Bošković</h3>
+                        <p class="pais">🇷🇸 Sérvia | Oposta</p>
+                        <p>Uma das opostas mais letais da história do voleibol. Com um ataque canhoto de extrema potência e alcance, foi eleita MVP de diversos campeonatos mundiais e europeus.</p>
+                    </div>
+                </div>
+
+                <!-- JOGADORA 3 -->
+                <div class="jogadora-card">
+                    <img src="https://images.unsplash.com/photo-1547347298-1d74850d995e?auto=format&fit=crop&w=600&q=80" alt="Zhu Ting" class="jogadora-img">
+                    <div class="jogadora-info">
+                        <h3>Zhu Ting</h3>
+                        <p class="pais">🇨🇳 China | Ponteira</p>
+                        <p>Campeã olímpica e MVP dos Jogos do Rio 2016. Zhu Ting é famosa por sua incrível altura e capacidade de alcance no salto, sendo decisiva nos momentos mais importantes.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 - Site sobre Vôlei | Criado para amantes do esporte</p>
+    </footer>
+
+</body>
+</html>
