@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universo do Vôlei | Regras, Posições e Estrelas</title>
+    <title>Mundo do Vôlei</title>
     <style>
-        /* RESET E ESTILOS GERAIS */
         * {
             margin: 0;
             padding: 0;
@@ -14,91 +13,74 @@
         }
 
         body {
-            background-color: #f0f4f8;
-            color: #1a252f;
+            background-color: #f4f7f6;
+            color: #333;
             line-height: 1.6;
         }
 
-        /* CABEÇALHO */
         header {
-            background: linear-gradient(135deg, #003366, #0055a5);
-            color: #ffffff;
-            padding: 2.5rem 1rem;
+            background: linear-gradient(135deg, #0056b3, #0099ff);
+            color: white;
+            padding: 40px 20px;
             text-align: center;
         }
 
         header h1 {
             font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
         }
 
-        header p {
-            color: #ffcc00;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        /* MENU DE NAVEGAÇÃO */
         nav {
-            background-color: #001f3f;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            flex-wrap: wrap;
+            background-color: #003d80;
+            text-align: center;
+            padding: 10px;
         }
 
         nav a {
-            color: #ffffff;
+            color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-weight: bold;
-            transition: color 0.3s;
         }
 
         nav a:hover {
             color: #ffcc00;
         }
 
-        /* CONTAINER PRINCIPAL */
         .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
         section {
-            background: #ffffff;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         h2 {
-            color: #003366;
-            margin-bottom: 1.5rem;
-            border-bottom: 3px solid #ffcc00;
-            display: inline-block;
+            color: #0056b3;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #0056b3;
             padding-bottom: 5px;
         }
 
-        /* GRID DE CARDS COM IMAGENS */
-        .card-grid {
+        .saques-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
+            gap: 20px;
+            margin-top: 20px;
         }
 
         .card {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
+            background-color: #fafafa;
+            text-align: center;
         }
 
         .card img {
@@ -108,222 +90,126 @@
         }
 
         .card-content {
-            padding: 1.2rem;
-            flex-grow: 1;
+            padding: 15px;
         }
 
         .card-content h3 {
-            color: #0055a5;
-            margin-bottom: 0.5rem;
+            color: #003d80;
+            margin-bottom: 10px;
         }
 
-        .card-content .sub {
-            color: #666;
-            font-size: 0.9rem;
-            font-weight: bold;
-            margin-bottom: 0.8rem;
+        .jogadora-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-top: 20px;
         }
 
-        /* SEÇÃO DE DESTAQUE (MELHOR TIME DE 2026) */
-        .highlight-box {
-            background: linear-gradient(135deg, #eef5fc, #ffffff);
-            border: 2px solid #0055a5;
+        .jogadora-img {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .jogadora-img img {
+            width: 100%;
             border-radius: 8px;
-            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        .badge {
-            background-color: #ffcc00;
-            color: #001f3f;
-            padding: 4px 12px;
-            font-weight: bold;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
+        .jogadora-texto {
+            flex: 2;
+            min-width: 280px;
         }
 
-        /* RODAPÉ */
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background-color: #001f3f;
-            color: #ffffff;
-        }
-
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                text-align: center;
-            }
+            padding: 20px;
+            background-color: #003d80;
+            color: white;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Universo Vôlei</h1>
-        <p>Origem, Saques, Posições e as Maiores Estrelas do Esporte</p>
+        <h1>Tudo Sobre o Vôlei</h1>
+        <p>A história, os saques e os grandes nomes do esporte</p>
     </header>
 
     <nav>
-        <a href="#origem">Origem</a>
+        <a href="#o-que-e">O que é Vôlei</a>
         <a href="#saques">Tipos de Saque</a>
-        <a href="#posicoes">Posições em Quadra</a>
-        <a href="#jogadoras">Melhores Jogadoras</a>
-        <a href="#melhor-time">Melhor Time de 2026</a>
+        <a href="#jogadora">Jogadora Famosa</a>
     </nav>
 
     <div class="container">
 
-        <!-- 1. ORIGEM DO VÔLEI -->
-        <section id="origem">
-            <h2>A Origem do Vôlei</h2>
-            <p>O voleibol foi inventado em <strong>9 de fevereiro de 1895</strong> por William G. Morgan, diretor de Educação Física da ACM (Associação Cristã de Moços) em Holyoke, Massachusetts, nos Estados Unidos.</p>
+        <!-- Seção: O que é Vôlei -->
+        <section id="o-que-e">
+            <h2>O que é Voleibol?</h2>
+            <p>O <strong>voleibol</strong> (ou simplesmente vôlei) é um esporte coletivo praticado em uma quadra dividida por uma rede. O objetivo do jogo é fazer a bola passar por cima da rede e tocar o chão do lado da equipe adversária, ao mesmo tempo em que se evita que o adversário faça o mesmo.</p>
             <br>
-            <p>Morgan buscava criar um esporte de equipe sem contato físico direto para evitar o risco de lesões do basquete. Inicialmente batizado de <em>"Mintonette"</em>, o jogo utilizava a câmara de ar de uma bola de basquete e uma rede de tênis elevada a 1,98 m. Pouco tempo depois, o esporte foi renomeado para <strong>Volleyball</strong> em razão da dinâmica da bola sendo rebatida no ar (<em>volley</em>) de um lado para o outro.</p>
+            <p>Cada equipe é composta por 6 jogadores em quadra. As jogadas são construídas em até 3 toques na bola (além do bloqueio) por equipe, utilizando partes do corpo (geralmente as mãos e braços) para tocar, passar e atacar.</p>
         </section>
 
-        <!-- 2. TIPOS DE SAQUE COM IMAGENS -->
+        <!-- Seção: Tipos de Saque -->
         <section id="saques">
-            <h2>Tipos de Saque</h2>
-            <p style="margin-bottom: 1.5rem;">O saque é o primeiro ataque e coloca a bola em jogo. Conheça os principais tipos executados na modalidade:</p>
+            <h2>3 Tipos de Saque no Vôlei</h2>
+            <p>O saque é o fundamento que coloca a bola em jogo. Confira três dos tipos mais utilizados:</p>
 
-            <div class="card-grid">
+            <div class="saques-grid">
+                
+                <!-- Saque Por Baixo -->
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1592656670497-428616149449?auto=format&fit=crop&w=600&q=80" alt="Demonstração do Saque por Baixo">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/638436801502168377_0" alt="Saque por baixo no vôlei">
                     <div class="card-content">
-                        <h3>Saque por Baixo</h3>
-                        <p>O atleta segura a bola abaixo da cintura e a golpeia por baixo com a mão oposta. É o tipo mais simples, ideal para iniciantes e nas aulas escolares.</p>
+                        <h3>1. Saque por Baixo</h3>
+                        <p>É o tipo mais básico e fácil de executar. O jogador segura a bola com uma mão e a golpeia por baixo com a outra. É ideal para iniciantes pois oferece excelente controle da bola.</p>
                     </div>
                 </div>
 
+                <!-- Saque Por Cima / Flutuante -->
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=600&q=80" alt="Demonstração do Saque por Cima">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/12989840337010914948_0" alt="Saque por cima no vôlei">
                     <div class="card-content">
-                        <h3>Saque por Cima</h3>
-                        <p>A bola é lançada acima da cabeça e atingida no alto com a palma da mão espalmada. Garante boa velocidade, força e direcionamento.</p>
+                        <h3>2. Saque por Cima (Tipo Tênis)</h3>
+                        <p>O jogador lança a bola para o alto e a golpeia com a mão aberta acima da cabeça. Pode ser feito sem salto e costuma fazer a bola flutuar, dificultando a recepção adversária.</p>
                     </div>
                 </div>
 
+                <!-- Saque Viagem ao Fundo -->
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1547347298-1d74850d995e?auto=format&fit=crop&w=600&q=80" alt="Demonstração do Saque Flutuante">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/13525181062246537806_0" alt="Saque viagem ao fundo no vôlei">
                     <div class="card-content">
-                        <h3>Saque Flutuante</h3>
-                        <p>Realizado em pé ou com um curto salto, o golpe atinge o centro da bola sem imprimir rotação, fazendo com que o vento altere sua trajetória no ar.</p>
+                        <h3>3. Saque Viagem ao Fundo</h3>
+                        <p>É o saque mais potente e agressivo. O atleta lança a bola bem alto, corre e salta no ar para golpeá-la com o máximo de força e rotação, alcançando altíssimas velocidades.</p>
                     </div>
                 </div>
 
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588492885706-b8917f06df77?auto=format&fit=crop&w=600&q=80" alt="Demonstração do Saque Viagem">
-                    <div class="card-content">
-                        <h3>Saque Viagem (com Salto)</h3>
-                        <p>O jogador lança a bola muito alta para a frente, ganha velocidade, salta e golpeia a bola no auge do salto. É o saque mais potente do vôlei.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- 3. POSIÇÕES NO VÔLEI COM IMAGENS -->
-        <section id="posicoes">
-            <h2>Posições no Vôlei</h2>
-            <p style="margin-bottom: 1.5rem;">Uma equipe conta com 6 jogadores em quadra, divididos por posições especializadas com funções distintas:</p>
-
-            <div class="card-grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Levantador em quadra">
-                    <div class="card-content">
-                        <h3>Levantador (S)</h3>
-                        <p>O "cérebro" do time. Toma o segundo toque para distribuir as bolas aos atacantes de forma rápida e estratégica.</p>
-                    </div>
+        <!-- Seção: Jogadora Famosa -->
+        <section id="jogadora">
+            <h2>Jogadora em Destaque: Gabi Guimarães</h2>
+            <div class="jogadora-container">
+                <div class="jogadora-img">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/17455748409977956871_0" alt="Gabi Guimarães jogadora de vôlei">
                 </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1592656670497-428616149449?auto=format&fit=crop&w=600&q=80" alt="Ponteiro atacando">
-                    <div class="card-content">
-                        <h3>Ponta / Ponteiro (OH)</h3>
-                        <p>Jogador equilibrado que atua no lado esquerdo da rede. É fundamental no passe (recepção) e no ataque da ponta de rede.</p>
-                    </div>
+                <div class="jogadora-texto">
+                    <h3>Gabriela Guimarães (Gabi)</h3>
+                    <p><strong>Gabriela Braga Guimarães</strong>, mais conhecida como <strong>Gabi</strong>, é uma das maiores e mais reconhecidas jogadoras de voleibol do mundo na atualidade.</p>
+                    <br>
+                    <p>Atuando na posição de ponteira, Gabi se destaca por sua incrível impulsão, precisão no passe e liderança dentro de quadra. Ela é capitã da Seleção Brasileira Feminina de Vôlei, conquistando medalhas olímpicas e títulos internacionais em grandes clubes da Europa.</p>
                 </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=600&q=80" alt="Bloqueio do Central">
-                    <div class="card-content">
-                        <h3>Central / Meio de Rede (MB)</h3>
-                        <p>Especialista em bloqueio e ataque rápido pelo meio da quadra. Geralmente são os atletas mais altos do elenco.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588492885706-b8917f06df77?auto=format&fit=crop&w=600&q=80" alt="Atacante Oposto">
-                    <div class="card-content">
-                        <h3>Oposto (OPP)</h3>
-                        <p>Atua no lado oposto ao levantador. É o atacante principal e de maior potência, atacando tanto da frente quanto do fundo.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80" alt="Líbero em ação defensiva">
-                    <div class="card-content">
-                        <h3>Líbero (L)</h3>
-                        <p>Especialista em recepção e defesa. Veste uniforme de cor diferente, joga apenas na linha de fundo e não realiza bloqueios nem ataques acima da rede.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. MELHORES JOGADORAS COM IMAGENS -->
-        <section id="jogadoras">
-            <h2>3 das Melhores Jogadoras do Vôlei</h2>
-            <p style="margin-bottom: 1.5rem;">Três das atletas mais influentes, vitoriosas e talentosas da modalidade mundial:</p>
-
-            <div class="card-grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=600&q=80" alt="Gabi Guimarães">
-                    <div class="card-content">
-                        <h3>Gabi Guimarães</h3>
-                        <div class="sub">Brasil | Ponteira</div>
-                        <p>Capitã da seleção brasileira e estrela internacional. Destaca-se pelo passe perfeito, grande volume defensivo e habilidade de ataque técnica.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1519766304817-4f37bda74a29?auto=format&fit=crop&w=600&q=80" alt="Tijana Bošković">
-                    <div class="card-content">
-                        <h3>Tijana Bošković</h3>
-                        <div class="sub">Sérvia | Oposta</div>
-                        <p>Uma das opostas mais letais de todos os tempos. Canhota super potente, foi campeã e MVP em múltiplos Campeonatos Mundiais.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=600&q=80" alt="Zhu Ting">
-                    <div class="card-content">
-                        <h3>Zhu Ting</h3>
-                        <div class="sub">China | Ponteira</div>
-                        <p>Campeã olímpica e MVP nos Jogos da Rio 2016. Conhecida por seu alcance incrível no salto e precisão ofensiva em momentos decisivos.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. MELHOR TIME DE 2026 -->
-        <section id="melhor-time">
-            <h2>Melhor Time do Ano (2026)</h2>
-            <div class="highlight-box">
-                <span class="badge">Destaque de 2026</span>
-                <h3>Imoco Volley Conegliano 🇮🇹</h3>
-                <br>
-                <p>No cenário mundial de clubes de voleibol em 2026, o <strong>Imoco Volley Conegliano</strong> (Itália) permanece consolidado como a equipe mais forte do mundo. O time italiano domina as competições europeias (CEV Champions League) e mundiais devido à sua estrutura profissional, elenco repleto de estrelas internacionais e alta consistência tática.</p>
-                <br>
-                <p><em>No cenário de seleções nacionais, potências como a Itália e a Polônia continuam liderando o ranking oficial da FIVB no ano de 2026.</em></p>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 - Guia Completo do Vôlei | Todos os direitos reservados</p>
+        <p>&copy; 2026 - Site Informativo sobre Voleibol</p>
     </footer>
 
 </body>
